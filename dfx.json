@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "alumnos_backend": {
+      "main": "src/alumnos_backend/main.mo",
+      "type": "motoko"
+    },
+    "alumnos_frontend": {
+      "dependencies": [
+        "alumnos_backend"
+      ],
+      "frontend": {
+        "entrypoint": "dist/alumnos_frontend/index.html"
+      },
+      "source": [
+        "src/alumnos_frontend/assets",
+        "dist/alumnos_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
